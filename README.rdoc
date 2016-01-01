@@ -1,12 +1,13 @@
 == README
 
-== 3 steps - og siden er oppe
+== Vejledning - rvs
 $ git clone 
 
 $ rake db:migrate
+
 $ rake db:seed
 
-
+== Original
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
