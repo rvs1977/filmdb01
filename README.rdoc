@@ -1,6 +1,6 @@
 == README
 
-== 3 steps Vejledning - rvs
+== 4 steps Vejledning - rvs
 $ git clone https://github.com/rvs1977/filmdb01.git
 
 $ rake db:create
