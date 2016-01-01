@@ -1,7 +1,7 @@
 == README
 
-== Vejledning - rvs
-$ git clone 
+== 3 steps Vejledning - rvs
+$ git clone https://github.com/rvs1977/filmdb01.git
 
 $ rake db:migrate
 
