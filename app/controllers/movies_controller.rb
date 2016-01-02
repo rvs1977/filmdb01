@@ -1,10 +1,13 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
+  helper_method :sort_column, :sort_direction
+
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    # @movies = Movie.all
+    @movies = Movie.order(sort_column + " " + sort_direction)
   end
 
   # GET /movies/1
@@ -69,6 +72,15 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :genre_id, :year_id, :summary, :rating_id, :image)
+      params.require(:movie).permit(:title, :genre_id, :year, :summary, :rating_id, :image)
     end
+
+    def sort_column
+      Movie.column_names.include?(params[:sort]) ? params[:sort] : "title"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+
 end

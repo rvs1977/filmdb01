@@ -21,9 +21,10 @@
     <%= f.collection_select(:genre_id, Genre.all, :id, :genre) %>
   </div>
 
+  
   <div class="field rvs select box">
-    <%= f.label :year_id %><br>
-    <%= f.collection_select(:year_id, Year.all, :id, :year) %>
+    <%= f.label :year %><br>
+    <%= f.select :year,  Movie::YEARS %>
   </div>
 
   <div class="field">

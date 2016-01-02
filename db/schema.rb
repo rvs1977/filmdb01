@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151231100422) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title",              limit: 255
-    t.integer  "year_id",            limit: 4
+    t.integer  "year",               limit: 4
     t.integer  "genre_id",           limit: 4
     t.text     "summary",            limit: 65535
     t.integer  "rating_id",          limit: 4
@@ -35,12 +35,6 @@ ActiveRecord::Schema.define(version: 20151231100422) do
 
   create_table "ratings", force: :cascade do |t|
     t.string   "rating",     limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "years", force: :cascade do |t|
-    t.string   "year",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

@@ -2,7 +2,7 @@ class CreateMovies < ActiveRecord::Migration
   def up
     create_table :movies do |t|
       t.string :title
-      t.integer :year_id
+      t.integer :year
       t.integer :genre_id
       t.text :summary
       t.integer :rating_id
